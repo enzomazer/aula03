@@ -2,13 +2,16 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
 
+    const [produtos, setProdutos]
 
     useEffect(() => {
         const receberListaProdutos = async () => {
             try {
-
-            } catch (erro) {
-
+                const resposta = await fetch("https://fakestoreapi.com/products")
+                const dados = await resposta.json();
+                setProdutos(dados)
+            } catch {
+                alert("deu erro ai")
             }
         }
         receberListaProdutos();
