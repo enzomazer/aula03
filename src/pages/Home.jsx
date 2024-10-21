@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
 
-    const [produtos, setProdutos]
+    const [produtos, setProdutos] = useState([])
 
     useEffect(() => {
         const receberListaProdutos = async () => {
             try {
-                const resposta = await fetch("https://fakestoreapi.com/products")
+                const resposta = await fetch("https://fkestoreapi.com/products")
                 const dados = await resposta.json();
                 setProdutos(dados)
             } catch {
