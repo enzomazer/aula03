@@ -5,7 +5,7 @@ import Listaprodutos from "../components/ListaProdutos"
 export default function Home() {
     return (
         <div>
-            <Listaprodutos lista={"https://fakestoreapi.com/products"}/>
+            <Listaprodutos/>
         </div>
     )
 }
